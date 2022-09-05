@@ -8,9 +8,9 @@ const Login = () => {
     <Wrapper>
       <div className="container">
         <img src={loginImg} alt="github user" />
-        <h1>Github User</h1>
+        <h1>Github User Statistics</h1>
         <button className="btn" onClick={loginWithRedirect}>
-          login
+          login / Signup
         </button>
       </div>
     </Wrapper>
