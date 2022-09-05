@@ -27,7 +27,7 @@ const GithubProvider = ({ children }) => {
           // throw an error
           toggleError(true, "sorry, you have exceeded your hourly rate limit!");
         }
-        console.log(data);
+
         setRequests(remaining);
       })
       .catch((err) => {
@@ -43,6 +43,7 @@ const GithubProvider = ({ children }) => {
   const searchGithubUser = async (user) => {
     toggleError();
     setLoading(true);
+    checkRequests();
     const response = await axios(`${rootUrl}/users/${user}`).catch((err) =>
       console.log(err)
     );
