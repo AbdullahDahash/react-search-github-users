@@ -72,6 +72,7 @@ const GithubProvider = ({ children }) => {
     console.log(response);
   };
 
+  useEffect(checkRequests, []);
   useEffect(checkRequests, [githubUser]);
 
   return (
